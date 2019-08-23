@@ -1,10 +1,10 @@
-from urllib import request, response
+import requests
 
 
 def main():
-    google_response = request.urlopen("https://google.com")
-    print(google_response.getcode())
-    print(google_response.read())
+    google_response = requests.get("https://google.com")
+    print(google_response.status_code)
+    print(google_response.text)
 
 
 if __name__ == "__main__":

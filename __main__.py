@@ -8,7 +8,7 @@ spotify_client = Authentication.get_spotify_api_client()
 
 def main():
     global initial_playlist_snapshot_id
-    playlist = spotify_client.user_playlist('glisto18', '1oH2OFIzRe5mssKmf8X4xm')
+    playlist = spotify_client.user_playlist('username_here', 'playlist_id_here')
     initial_playlist_snapshot_id = playlist['snapshot_id']
     print('Created clients and retrieved initial playlist snapshot id.')
 
@@ -21,7 +21,7 @@ def check_playlist_edited():
     print('In check playlist edited')
     global initial_playlist_snapshot_id
 
-    playlist = spotify_client.user_playlist('glisto18', '1oH2OFIzRe5mssKmf8X4xm')
+    playlist = spotify_client.user_playlist('username_here', 'playlist_id_here')
     current_id = playlist['snapshot_id']
 
     if initial_playlist_snapshot_id != current_id:

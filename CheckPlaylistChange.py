@@ -6,7 +6,7 @@ def check_playlist_edited(initial_playlist_snapshot_id: int, spotify_api: spotip
     print('In check playlist edited')
     initial_id = initial_playlist_snapshot_id
 
-    playlist = spotify_api.user_playlist('glisto18', '1oH2OFIzRe5mssKmf8X4xm')
+    playlist = spotify_api.user_playlist('username_here', 'playlist_id_here')
     current_id = playlist['snapshot_id']
 
     if initial_id != current_id:
